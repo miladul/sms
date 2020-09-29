@@ -44,6 +44,7 @@ if(isset($_POST['registration'])){
       if ($result==0) {
         if ($password==$c_password) {
           //echo "Yes Pass Mach";
+          
           $new_pass = md5($password);
           $insert_data = mysqli_query($link, "INSERT INTO `users`(`name`, `email`, `username`, `password`, `photo`) VALUES ('$name','$email','$username','$new_pass','$photo_name')");
           if ($insert_data) {
