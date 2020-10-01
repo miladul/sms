@@ -6,3 +6,14 @@
 .textItalic{
 	font-style: italic;
 }
+.content{
+	min-height: 500px;
+}
+
+.footer-area{
+	background: #337AB7;
+	text-align: center;
+	padding: 20px 0;
+	color: #FFFFFF;
+
+}
