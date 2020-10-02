@@ -1,8 +1,7 @@
 
 					<h1 style="color: #337AB7"><i class="fa fa-dashboard"></i> Dashboard <small>Statics Overview</small></h1>
 					<ol class="breadcrumb">
-						<li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-						<li><a href="#">Library</a></li>
+						<li><a href="index.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
 					</ol>
 					<div class="row">
 						<div class="col-sm-4">
