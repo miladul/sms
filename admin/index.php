@@ -31,6 +31,10 @@ if(!isset($_SESSION['username'])){
 	<script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" src="../js/dataTables.bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/style.js"></script>
+
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	
+	<!------ Include the above in your HEAD tag ---------->
 	
 	
 
@@ -93,7 +97,7 @@ if(!isset($_SESSION['username'])){
 					if(file_exists($page)){
 							require_once $page;
 						}else{
-							echo "<h1>404 Error</h1>";
+							require_once ('404.php');
 						}
 
 					
