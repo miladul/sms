@@ -12,7 +12,7 @@ if (isset($_POST['addStudent'])) {
 
 	$photo = explode('.', $_FILES['photo']['name']);
 	$photo_end = end($photo);
-	$photo_name = $name.'.'.$photo_end;
+	$photo_name = $name.'_'.$roll.'.'.$photo_end;
 	//cho $photo_name;
 	$input_error = array();
 
@@ -41,13 +41,13 @@ if (isset($_POST['addStudent'])) {
 		$roll_class_check = mysqli_query($link, "SELECT * FROM `student_info` WHERE `roll`='$roll' AND `class`='$class'");
 		$result = mysqli_num_rows($roll_class_check);
 		if($result==0){
-			$datetime=date("F j, Y, g:i a");
+			$datetime = date("Y-m-d H:i:s");
 			
 			$insert_data = mysqli_query($link, "INSERT INTO `student_info`(`name`, `roll`, `class`, `city`, `pcontact`, `photo`, `datetime`) VALUES ('$name','$roll','$class','$city','$pcontact','$photo_name','$datetime')");
 			if ($insert_data) {
 				$_SESSION['std_data_insert_success'] = "Data Insert Success";
 			move_uploaded_file($_FILES['photo']['tmp_name'], 'images/student_img/'.$photo_name);
-            header('location: index.php?page=add-student');
+            header('location: index.php?page=all-student');
 			}
 		}else{
 			$error = "Alredy added this student";
@@ -60,6 +60,8 @@ if (isset($_POST['addStudent'])) {
 }
 
 ?>
+
+
 
 
 

@@ -78,7 +78,7 @@ if(!isset($_SESSION['username'])){
 				<div class="list-group">
 					<a href="index.php?page=dashboard" class="list-group-item active"><i class="fa fa-dashboard"></i> Dashboard </a>
 					<a href="index.php?page=add-student" class="list-group-item"><i class="fa fa-user-plus"></i> Add Student</a>
-					<a href="index.php?page=all-students" class="list-group-item"><i class="fa fa-users"></i> All Student</a>
+					<a href="index.php?page=all-student" class="list-group-item"><i class="fa fa-users"></i> All Student</a>
 					<a href="index.php?page=all-users" class="list-group-item"><i class="fa fa-users"></i> All User</a>
 				</div>
 			</div>

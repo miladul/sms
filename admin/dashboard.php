@@ -78,59 +78,25 @@
 								<th>Name</th>
 								<th>Roll</th>
 								<th>City</th>
-								<th>Contact</th>
+								<th>P.Contact</th>
 								<th>Photo</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Miladul Islam</td>
-								<td>123456</td>
-								<td>Narail</td>
-								<td>0191900000</td>
-								<td>me.jpg</td>
+							<?php
+							$all_student = mysqli_query($link,"SELECT * FROM `student_info` ORDER BY `id` DESC");
+							while($rows = mysqli_fetch_assoc($all_student)){
+								?>
+								<tr>
+								<td><?=$rows['id']?></td>
+								<td><?=ucwords($rows['name'])?></td>
+								<td><?=$rows['roll']?></td>
+								<td><?=$rows['city']?></td>
+								<td><?=$rows['pcontact']?></td>
+								<td><img height="50px" src="<?='images/student_img/'.$rows['photo']?>"></td>
+								
 							</tr>
-							<tr>
-								<td>1</td>
-								<td>Miladul Islam</td>
-								<td>123456</td>
-								<td>Narail</td>
-								<td>0191900000</td>
-								<td>me.jpg</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>Miladul Islam</td>
-								<td>123456</td>
-								<td>Narail</td>
-								<td>0191900000</td>
-								<td>me.jpg</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>Miladul Islam</td>
-								<td>123456</td>
-								<td>Narail</td>
-								<td>0191900000</td>
-								<td>me.jpg</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>Miladul Islam</td>
-								<td>123456</td>
-								<td>Narail</td>
-								<td>0191900000</td>
-								<td>me.jpg</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>Rahim</td>
-								<td>123456</td>
-								<td>Narail</td>
-								<td>0191900000</td>
-								<td>me.jpg</td>
-							</tr>
+							<?php } ?>
 							
 						</tbody>
 					</table>
