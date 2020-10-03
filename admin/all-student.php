@@ -35,7 +35,7 @@
 					<td><img height="40px" src="<?='images/student_img/'.$rows['photo']?>"></td>
 					<td>
 						<a href="" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="" class="btn btn-success"><i class="fa fa-trash"></i> Delete</a>
+						<a href="delete-student.php?student=<?=base64_encode($rows['id'])?>" class="btn btn-success"><i class="fa fa-trash"></i> Delete</a>
 					</td>
 				</tr>
 			<?php } ?>
