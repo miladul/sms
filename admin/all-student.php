@@ -15,6 +15,7 @@
 				<th>ID</th>
 				<th>Name</th>
 				<th>Roll</th>
+				<th>Class</th>
 				<th>City</th>
 				<th>P.Contact</th>
 				<th>Photo</th>
@@ -30,11 +31,12 @@
 					<td><?=$rows['id']?></td>
 					<td><?=ucwords($rows['name'])?></td>
 					<td><?=$rows['roll']?></td>
+					<td><?=$rows['class']?></td>
 					<td><?=$rows['city']?></td>
 					<td><?=$rows['pcontact']?></td>
 					<td><img height="40px" src="<?='images/student_img/'.$rows['photo']?>"></td>
 					<td>
-						<a href="" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="index.php?page=update-student&id=<?=$rows['id']?>" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;
 						<a href="delete-student.php?student=<?=base64_encode($rows['id'])?>" class="btn btn-success"><i class="fa fa-trash"></i> Delete</a>
 					</td>
 				</tr>

@@ -84,7 +84,8 @@
 						</thead>
 						<tbody>
 							<?php
-							$all_student = mysqli_query($link,"SELECT * FROM `student_info` ORDER BY `id` DESC");
+							$all_student = mysqli_query($link,"SELECT * FROM `student_info` ORDER BY `id` DESC LIMIT 5");
+							//always show latest 5 students
 							while($rows = mysqli_fetch_assoc($all_student)){
 								?>
 								<tr>
