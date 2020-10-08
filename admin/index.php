@@ -61,9 +61,9 @@ if(!isset($_SESSION['username'])){
 
 
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="logout.php"><i class="fa fa-user"></i> Welcome-Miladul Islam</a></li>
-					<li><a href="logout.php"><i class="fa fa-user-plus"></i> Add User</a></li>
-					<li><a href="logout.php"><i class="fa fa-user"></i> Profile</a></li>
+					<li><a href="index.php"><i class="fa fa-user"></i> Welcome- <?php if(isset($_SESSION['name'])){echo $_SESSION['name'];}?></a></li>
+					<li><a href="index.php?page=add-user"><i class="fa fa-user-plus"></i> Add User</a></li>
+					<li><a href="index.php?page=user-profile"><i class="fa fa-user"></i> Profile</a></li>
 					<li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->

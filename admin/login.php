@@ -18,8 +18,10 @@ if(isset($_POST['login'])){
     if ($row['password']==md5($password)) {
       if ($row['status']==1) {
         $_SESSION['id']=$row['id'];
+        $_SESSION['name']=$row['name'];
         $_SESSION['email']=$row['email'];
         $_SESSION['username']=$row['username'];
+        $_SESSION['photo']=$row['photo'];
         header('location: index.php');
       }else{
         $error =  "Your Status Inactive";

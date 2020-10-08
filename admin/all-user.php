@@ -22,8 +22,8 @@
 		</thead>
 		<tbody>
 			<?php
-			$all_student = mysqli_query($link,"SELECT * FROM `users` ORDER BY `id` DESC");
-			while($rows = mysqli_fetch_assoc($all_student)){
+			$all_users = mysqli_query($link,"SELECT * FROM `users` ORDER BY `id` DESC");
+			while($rows = mysqli_fetch_assoc($all_users)){
 				?>
 				<tr>
 					<td><?=$rows['id']?></td>
@@ -32,11 +32,12 @@
 					<td><?=$rows['username']?></td>
 					<td><img height="40px" src="<?='images/'.$rows['photo']?>"></td>
 					<td>
-						<a href="" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a>
-						<a href="" class="btn btn-success"><i class="fa fa-trash"></i> Delete</a>
+						<a href="index.php?page=update-user&id=<?=$rows['id']?>" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a>
+						<a href="index.php?page=delete-user&id=<?=$rows['id']?>" class="btn btn-success"><i class="fa fa-trash"></i> Delete</a>
 					</td>
 				</tr>
 			<?php } ?>
 
 		</tbody>
 	</table>
+</div>
