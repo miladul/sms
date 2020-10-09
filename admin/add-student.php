@@ -45,9 +45,9 @@ if (isset($_POST['addStudent'])) {
 			
 			$insert_data = mysqli_query($link, "INSERT INTO `student_info`(`name`, `roll`, `class`, `city`, `pcontact`, `photo`, `datetime`) VALUES ('$name','$roll','$class','$city','$pcontact','$photo_name','$datetime')");
 			if ($insert_data) {
-				$_SESSION['std_data_insert_success'] = "Data Insert Success";
+				$std_data_insert_success = "Data Insert Success";
 			move_uploaded_file($_FILES['photo']['tmp_name'], 'images/student_img/'.$photo_name);
-            header('location: index.php?page=all-student');
+            header('location: index.php?page=all-student&added');
 			}
 		}else{
 			$error = "Alredy added this student";
@@ -82,7 +82,7 @@ if (isset($_POST['addStudent'])) {
 	<li><a href="index.php?page=add-student">Add Student</a></li>
 </ol>
 
-<?php if(isset($_SESSION['std_data_insert_success'])){ echo '<div class="alert alert-success" role="alert">'.$_SESSION['std_data_insert_success'].'</div>'; }?>
+
 
 <?php if(isset($error)){ echo '<div class="alert alert-warning" role="alert">'.$error.'</div>'; }?>
 
@@ -106,7 +106,7 @@ if (isset($_POST['addStudent'])) {
 			</div>
 			<div class="form-group">
 				<label for="pcontact">Parent Contact:</label>
-				<input type="text" name="pcontact" id="pcontact" placeholder="Student Name" pattern="[0-9]{11}" class="form-control" value="<?php if(isset($pcontact)){echo $pcontact;}?>">
+				<input type="text" name="pcontact" id="pcontact" placeholder="Parent Contact" pattern="[0-9]{11}" class="form-control" value="<?php if(isset($pcontact)){echo $pcontact;}?>">
 				<span class="textColoDanger"><?php if(isset($input_error['pcontact'])){echo $input_error['pcontact'];}?></span>
 			</div>
 			<div class="form-group">

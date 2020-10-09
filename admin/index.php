@@ -36,13 +36,9 @@ if(!isset($_SESSION['username'])){
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	
 	<!------ Include the above in your HEAD tag ---------->
-	
-	
-
-
 </head>
-<body>
 
+<body>
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -70,7 +66,6 @@ if(!isset($_SESSION['username'])){
 		</div><!-- /.container-fluid -->
 	</nav>
 
-
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-3">
@@ -84,30 +79,21 @@ if(!isset($_SESSION['username'])){
 			</div>
 			<!------------End Rightbar menu------------------->
 
-			<div class="col-sm-9">
-
-
+			<div class="col-sm-9 testColor">
 				<div class="content">
 					<?php 
-					//require_once('dashboard.php');
 					if(isset($_GET['page'])){
 						$page = $_GET['page'].'.php';
 					}else{
 						$page = 'dashboard.php';
 					}
 					if(file_exists($page)){
-							require_once $page;
-						}else{
-							require_once ('404.php');
-						}
-
-					
-
-
+						require_once $page;
+					}else{
+						require_once ('404.php');
+					}
 					?>
-					
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -117,10 +103,5 @@ if(!isset($_SESSION['username'])){
 	<footer class="footer-area">
 		<p>&copy; Copyright-2020 miladul@example.com </p>
 	</footer>
-
-
-	
-
-
 </body>
 </html>

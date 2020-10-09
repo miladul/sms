@@ -8,6 +8,7 @@
 }
 .content{
 	min-height: 500px;
+  
 }
 
 .footer-area{
@@ -16,10 +17,6 @@
 	padding: 20px 0;
 	color: #FFFFFF;
 
-}
-
-.profilePic{
-	margin: 16px;
 }
 
 
@@ -33,3 +30,4 @@
   -moz-border-radius: 50% !important;
   border-radius: 50% !important;
 }
+

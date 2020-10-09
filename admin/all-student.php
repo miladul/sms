@@ -5,7 +5,7 @@
 	<li><a href="index.php"> All Student</a></li>
 </ol>
 
-
+<?php if(isset($_GET['added'])){ echo '<div class="alert alert-success" role="alert">New Student Added Successfully</div>'; }?>
 
 
 <div class="table-responsive">
