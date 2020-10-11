@@ -1,8 +1,8 @@
 
-<h1 style="color: #337AB7"><i class="fa fa-lock"></i> Inactive User</h1>
+<h1 style="color: #337AB7"><i class="fa fa-thumbs-o-up"></i> Active User</h1>
 <ol class="breadcrumb">
 	<li><a href="index.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-	<li><a href="index.php"> Inactive Users</a></li>
+	<li><a href="index.php"> Active Users</a></li>
 </ol>
 
 
@@ -22,7 +22,7 @@
 		</thead>
 		<tbody>
 			<?php
-			$all_users = mysqli_query($link,"SELECT * FROM `users` WHERE `status`=0");
+			$all_users = mysqli_query($link,"SELECT * FROM `users` WHERE `status`=1");
 			while($rows = mysqli_fetch_assoc($all_users)){
 				?>
 				<tr>

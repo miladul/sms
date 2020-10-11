@@ -36,7 +36,7 @@
 					<td><?=$rows['pcontact']?></td>
 					<td><img height="40px" src="<?='images/student_img/'.$rows['photo']?>"></td>
 					<td>
-						<a href="index.php?page=update-student&id=<?=$rows['id']?>" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="index.php?page=update-student&id=<?=$rows['id']?>" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a>
 						<a href="delete-student.php?student=<?=base64_encode($rows['id'])?>" class="btn btn-success"><i class="fa fa-trash"></i> Delete</a>
 					</td>
 				</tr>
